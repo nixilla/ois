@@ -1,8 +1,9 @@
 dataSource {
 	pooled = true
-	driverClassName = "org.hsqldb.jdbcDriver"
-	username = "sa"
-	password = ""
+        url = "jdbc:mysql://192.168.1.50:3306/ois"
+	driverClassName = "com.mysql.jdbc.Driver"
+	username = "ois"
+	password = "ois"
 }
 hibernate {
     cache.use_second_level_cache=true
@@ -14,19 +15,19 @@ environments {
 	development {
 		dataSource {
 			dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-			url = "jdbc:hsqldb:mem:devDB"
+			url = "jdbc:mysql://192.168.1.50/oisdev"
 		}
 	}
 	test {
 		dataSource {
 			dbCreate = "update"
-			url = "jdbc:hsqldb:mem:testDb"
+			url = "jdbc:mysql://192.168.1.50/oistest"
 		}
 	}
 	production {
 		dataSource {
 			dbCreate = "update"
-			url = "jdbc:hsqldb:file:prodDb;shutdown=true"
+			url = "jdbc:mysql://192.168.1.50/oislive"
 		}
 	}
 }
