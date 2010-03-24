@@ -1,0 +1,15 @@
+@charset "utf-8";
+* { margin: 0px; padding: 0px; }
+body { background: #f3f3f3 url(../images/coursework/header-bg.gif) repeat-x; font-family: verdana; font-size: 12px;}
+.wrapper { width: 1000px; margin: 0px auto;}
+.wrapper .header { float: left; width: 1000px; height: 60px; }
+
+.wrapper .content { float: left; width: 1000px; padding: 0 0 20px 0; min-height: 640px; background: #f3f3f3;}
+
+.wrapper .menu { float: left; background: #ee6b10; width: 1000px; height: 33px;}
+.wrapper .menu ul { float: left; height: 33px; }
+.wrapper .menu ul li { float: left; list-style: none; height: 33px; }
+.wrapper .menu ul li a { text-decoration: none; background: transparent url(../images/coursework/main-tab-right.gif) no-repeat right 0; margin-top: 2px; display: block; }
+.wrapper .menu ul li a span { color: #fff; background: transparent url(../images/coursework/main-tab-left.gif) no-repeat left 0; padding:11px 14px 4px 15px; display: block; letter-spacing: 0.04em; }
+.wrapper .menu ul li a.on { background-image: url(../images/coursework/main-tab-current-right.gif); }
+.wrapper .menu ul li a.on span { color: #000; background-image: url(../images/coursework/main-tab-current-left.gif); }

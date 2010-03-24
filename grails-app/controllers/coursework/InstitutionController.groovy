@@ -2,5 +2,6 @@ package coursework
 
 class InstitutionController {
 
-    def scaffold = Institution
+    // def scaffold = Institution
+    def index = { }
 }
