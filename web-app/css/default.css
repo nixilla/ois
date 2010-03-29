@@ -1,10 +1,38 @@
 @charset "utf-8";
 * { margin: 0px; padding: 0px; }
+a { color: #002BB8; text-decoration: none; }
+a[target="_blank"] { color: #3366BB; background: transparent url(../images/coursework/external.png) no-repeat scroll right center; padding:0 13px 0px 0px; }
 body { background: #f3f3f3 url(../images/coursework/header-bg.gif) repeat-x; font-family: verdana; font-size: 12px;}
 .wrapper { width: 1000px; margin: 0px auto;}
 .wrapper .header { float: left; width: 1000px; height: 60px; }
 
-.wrapper .content { float: left; width: 1000px; padding: 0 0 20px 0; min-height: 640px; background: #f3f3f3;}
+.wrapper .content { float: left; width: 1000px; min-height: 420px; background: #f3f3f3;}
+.wrapper .content .leftColumn { width: 460px; padding: 10px 20px 10px 20px; float:left;}
+.wrapper .content div h1 { font-size: 16px; margin: 10px 0px; }
+.wrapper .content div h2 { font-size: 13px; margin: 10px 0px; }
+.wrapper .content div p { margin: 5px 0px; }
+.wrapper .content div p a { color: inherit; text-decoration: none; font-weight: bold;}
+.wrapper .content div ol { margin-left: 30px;}
+.wrapper .content div ul { margin-left: 30px;}
+
+.wrapper .content .rightColumn { width: 460px; padding: 10px 20px 10px 20px; float:left; }
+.wrapper .content .rightColumn form { margin: 10px 0px;}
+.wrapper .content .rightColumn form input { font-family: arial,sans-serif; font-size:17px; vertical-align:middle; width: 370px; }
+.wrapper .content .rightColumn form input[type="submit"] { font-family: arial,sans-serif; font-size:15px; height:1.85em; vertical-align:middle; margin: 0px 5px; padding: 2px 5px; width: auto; }
+
+.wrapper .content .nav { margin: 20px; }
+
+.wrapper .content .body { margin: 0px 20px; }
+.wrapper .content .body div table { width: 100%; border-collapse: collapse; }
+.wrapper .content .body div table thead { background-color: #ddd; }
+.wrapper .content .body div table thead tr th { border-top: 1px solid #ccc; height: 25px; }
+.wrapper .content .body div table thead tr th a { text-decoration: none; color: inherit; }
+.wrapper .content .body div table tbody tr { height: 25px;}
+.wrapper .content .body div table tbody tr.even { background-color: #eee; }
+.wrapper .content .body div table tbody tr td { padding: 0px 5px; }
+.wrapper .content .body div table tbody tr td.numeric { text-align: right; }
+
+/* background:transparent url(external.png) no-repeat scroll right center; padding:0 13px; */
 
 .wrapper .menu { float: left; background: #ee6b10; width: 1000px; height: 33px;}
 .wrapper .menu ul { float: left; height: 33px; }

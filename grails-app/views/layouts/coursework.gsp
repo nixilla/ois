@@ -16,15 +16,16 @@
       </div>
       <div class="menu">
         <ul>
-          <li><a class="home" href="${resource(dir: '')}"><span>Home</span></a></li>
+          <li><a class="home" href="${createLink(uri: '/')}"><span>Home</span></a></li>
           <li><g:link class="institution" controller="institution"><span>Institutions</span></g:link></li>
           <li><g:link class="programme" controller="programme"><span>Programmes</span></g:link></li>
+          <li><g:link class="connection" controller="connection"><span>Connections</span></g:link></li>
         </ul>
       </div>
       <div class="content">
         <g:layoutBody />
       </div>
-      <div class="footer">&copy; 2010 Janusz Slota &amp; Nima Fatemi</div>
+      <div class="footer">&copy; 2010 <a href="http://janusz.slota.name/blog/" target="_blank">Janusz Slota</a> &amp; Nima Fatemi</div>
     </div>
   </body>
 </html>
