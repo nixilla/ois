@@ -31,7 +31,7 @@
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="programme.link.label" default="Link" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: programmeInstance, field: "link")}</td>
+                            <td valign="top" class="value"><a href="${fieldValue(bean: programmeInstance, field: "link")}" target="_blank">${fieldValue(bean: programmeInstance, field: "link")}</a></td>
                             
                         </tr>
                     

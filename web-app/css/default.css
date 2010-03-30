@@ -31,13 +31,15 @@ body { background: #f3f3f3 url(../images/coursework/header-bg.gif) repeat-x; fon
 .wrapper .content .body div table tbody tr.even { background-color: #eee; }
 .wrapper .content .body div table tbody tr td { padding: 0px 5px; }
 .wrapper .content .body div table tbody tr td.numeric { text-align: right; }
+.wrapper .content .body div table tbody tr td.name { width: 100px; text-align: right; }
+.wrapper .content .body div table tbody tr td.value input[type="text"] { width: 350px; }
 
 /* background:transparent url(external.png) no-repeat scroll right center; padding:0 13px; */
 
 .wrapper .menu { float: left; background: #ee6b10; width: 1000px; height: 33px;}
 .wrapper .menu ul { float: left; height: 33px; }
 .wrapper .menu ul li { float: left; list-style: none; height: 33px; }
-.wrapper .menu ul li a { text-decoration: none; background: transparent url(../images/coursework/main-tab-right.gif) no-repeat right 0; margin-top: 2px; display: block; }
+.wrapper .menu ul li a { text-decoration: none; background: transparent url(../images/coursework/main-tab-right.gif) no-repeat right 0; margin-top: 4px; display: block; }
 .wrapper .menu ul li a span { color: #fff; background: transparent url(../images/coursework/main-tab-left.gif) no-repeat left 0; padding:11px 14px 4px 15px; display: block; letter-spacing: 0.04em; }
 .wrapper .menu ul li a.on { background-image: url(../images/coursework/main-tab-current-right.gif); }
 .wrapper .menu ul li a.on span { color: #000; background-image: url(../images/coursework/main-tab-current-left.gif); }
