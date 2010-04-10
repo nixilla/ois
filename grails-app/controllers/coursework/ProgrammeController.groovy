@@ -7,7 +7,7 @@ class ProgrammeController {
 
     def listJSON = {
         def institution = Institution.findByName(params.institution.toString())
-        render institution.programme as JSON
+        render institution.programme.sort{it.name} as JSON
     }
     def testParams = {
         render params.level.class

@@ -41,7 +41,7 @@ $(document).ready(function()
         });
         $('select.institutionSelect').change(function() {$(this).parents('form').submit();});
 
-        $('form').submit(function()
+        $('form.connectionForm').submit(function()
         {
             var $form = $(this);
             var input = $(this).serializeArray();
@@ -79,17 +79,23 @@ $(document).ready(function()
                                 $('<div class="name">'+v.name+'</div>').appendTo('#oprogramme-'+v.id);
                             }
                         });
-                        $form.parent().children('.result').children('div:odd').addClass('odd');
                         $form.find('input[name="level"]').each(function()
                         {
                             if($(this).is(':checked')) $form.parent().children('.result').children('.'+$(this).val()).show();
                             else $form.parent().children('.result').children('.'+$(this).val()).hide();
                         });
+                        $form.parent().children('.result').children('div:visible:odd').addClass('odd');
                     }
                     $('input').attr('disabled',false);
                     $('select').attr('disabled',false);
+                    
+                    if(!$('input[type="radio"][name="programme"]:visible:checked').size()) $('input[type="checkbox"][name="programme"]').attr('disabled',true);
+                    else $('input[type="checkbox"][name="programme"]').attr('disabled',false);
+
+                    
                 }
             });
+            if($('input[type="radio"][name="programme"]:checked').size()) $('input[type="radio"][name="programme"]').each(function() { $(this).change(); return false; });
             return false;
         });
     }
@@ -101,4 +107,61 @@ $(document).ready(function()
         $(this).parents('form').parent().children('.result').children('div:visible:odd').addClass('odd');
     });
 
+    $('input[type="radio"][name="programme"]').livequery('change',function()
+    {
+        var input = { incoming: $('input[type="radio"][name="programme"]:checked').val(), institution: $('#outgoingForm').find('select[name="institution"]').val() }
+        $.ajax({
+            url:        '../connection/getforJSON',
+            method:     'post',
+            dataType:   'json',
+            data:       input,
+            success:    function(data,status)
+            {
+                if(status == 'success')
+                {
+                    $('input[type="checkbox"][name="programme"]').attr('disabled',false).attr('checked',false);
+                    
+                    if(data.result != undefined && data.result == 0) return false;
+
+                    $('input[type="checkbox"][name="programme"]').each(function()
+                    {
+                        $this = $(this);
+                        $.each(data, function(k,v)
+                        {
+                            if($this.val() == v.outgoing.id) $this.attr('checked',true);
+                        });
+                    });
+                }
+            }
+        });
+    });
+
+
+    $('form.saveForm').submit(function()
+    {
+        $('form.saveForm > input').val('Save').attr('disabled',true).val('Saving ...');
+        var input = { incoming: $('input[type="radio"][name="programme"]:checked').val(), outgoing: $('input[type="checkbox"][name="programme"]:checked').serialize(), institution: $('#outgoingForm').find('select[name="institution"]').val() };
+
+        $.ajax({
+            url:        '../connection/saveAll',
+            method:     'post',
+            dataType:   'json',
+            data:       input,
+            success:    function(data,status)
+            {
+                if(status == 'success')
+                {
+                    if(data.success == true)
+                    {
+                        $('form.saveForm > input').val('Data saved successfully');
+                        setTimeout("$('form.saveForm > input').val('Save').attr('disabled',false);",1000);
+                    }
+                    else alert('error');
+
+                }
+            }
+        });
+        
+        return false;
+    });
 });
