@@ -6,8 +6,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title><g:layoutTitle default="" /> &laquo; Online Information System &raquo;</title>
     <link rel="stylesheet" href="${resource(dir:'css',file:'default.css')}" />
+    <link rel="stylesheet" href="${resource(dir:'css',file:'jquery.liveSearch.css')}" />
     <link rel="shortcut icon" href="${resource(dir:'images',file:'favicon.ico')}" type="image/x-icon" />
-    <g:javascript library="jquery" /><g:javascript library="jquery.livequery" /><g:javascript library="app" />
+
+<g:javascript library="jquery" /><g:javascript library="jquery.livequery" /><g:javascript library="jquery.liveSearch" /><g:javascript library="app" />
     <g:layoutHead />
   </head>
   <body>

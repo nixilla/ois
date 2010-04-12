@@ -15,7 +15,12 @@ body { background: #f3f3f3 url(../images/coursework/header-bg.gif) repeat-x; fon
 .wrapper .content div ol { margin-left: 30px;}
 .wrapper .content div ul { margin-left: 30px;}
 
-.wrapper .content .saveForm { float: right; padding: 20px;}
+.wrapper .content .footer { float: left; width: 1000px; }
+.wrapper .content .footer form { float: right; padding: 20px; }
+
+.wrapper .content #homeForm { float: right; }
+.wrapper .content div #homeForm .programmeSelect { display: none; }
+.wrapper .content div #homeForm .outgoingSelect { display: none; }
 
 .wrapper .content div form fieldset { border: 0px none; padding: 3px 0px; }
 .wrapper .content div form fieldset select { width: auto;}
@@ -25,8 +30,12 @@ body { background: #f3f3f3 url(../images/coursework/header-bg.gif) repeat-x; fon
 .wrapper .content div .result div.odd { background-color: #eee; }
 .wrapper .content div .result div div { float: left; width: 430px; min-height: 18px; padding: 5px 0px; }
 .wrapper .content div .result div div:first-child { width: 30px; text-align: center;}
+.wrapper .content div .result div.title { margin-bottom: 10px; }
+.wrapper .content div .result div.title div { font-size: 1.2em; }
+.wrapper .content div .result div.title div:first-child { width: auto; text-align: left;}
+.wrapper .content div .result div.title div a { font-weight: bold;}
 
-.wrapper .content .rightColumn { width: 460px; padding: 10px 20px 10px 20px; float:left; }
+.wrapper .content .rightColumn { width: 460px; padding: 10px 20px 10px 20px; float:left; min-height: 420px; }
 .wrapper .content div form { margin: 10px 0px;}
 .wrapper .content div form input { font-family: arial,sans-serif; font-size:17px; vertical-align:middle; }
 .wrapper .content div form input[type="submit"] { font-family: arial,sans-serif; font-size:15px; height:1.85em; vertical-align:middle; margin: 0px 5px; padding: 2px 5px; width: auto; }
