@@ -8,14 +8,16 @@
       <h2>About this system</h2>
       <p>The purpose of the system is to show the various connection programmes between bachelor and masters programmes of study. After completion of a bachelor programme at a university, you can proceed to a related masters programme.</p>
       <p>This system has been build using Groovy and Grails and is running on ${application.getServerInfo()}. MySQL is used as the database backend.</p>
-      <p>This is system is also the CBSD coursework project of two students: Janusz Slota and Nima Fatemi.</p>
+      <p>This system is also the CBSD coursework project of two students: Janusz Slota and Nima Fatemi.</p>
       <h2>How to use it?</h2>
       <p>The system is very easy to use (I hope):</p>
       <ol>
-        <li>Type in the search box the name of the university you have graduated.</li>
-        <li>Select programme you've completed.</li>
-        <li>From the drop-down menu select university you wish to attend to.</li>
-        <li>The system will present you with the listings of all available programmes.</li>
+        <li>From the drop-down menu, select the institution you've graduated.</li>
+        <li>The website will present you with the list of programmes (drop-down box) assigned to the selected institution.</li>
+        <li>From this drop-down, select programme you have completed.</li>
+        <li>The website will present you with the list of institutions, where (and only where) your diploma is accepted.</li>
+        <li>Select institution of your choice.</li>
+        <li>The website will present you with the list of available programmes with links to their websites.</li>
       </ol>
       <p>If the university or programme you've completed is missing in the database, you need to add it. You can add university (aka institution) <g:link controller="institution" action="create">here</g:link> and programme <g:link controller="programme" action="create">here</g:link>. Please note that you must add university first.</p>
       <h2>System information:</h2>
