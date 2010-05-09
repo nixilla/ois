@@ -28,7 +28,7 @@
       <div class="content">
         <g:layoutBody />
       </div>
-      <div class="footer">&copy; 2010 <a href="http://janusz.slota.name/blog/" target="_blank">Janusz Slota</a> &amp; <a href="http://www.dcs.bbk.ac.uk/~nfatem02/">Nima Fatemi</a></div>
+      <div class="footer">&copy; 2010 <a href="http://janusz.slota.name/blog/" target="_blank">Janusz Slota</a> &amp; <a href="http://www.dcs.bbk.ac.uk/~nfatem02/" target="_blank">Nima Fatemi</a></div>
     </div>
   </body>
 </html>
