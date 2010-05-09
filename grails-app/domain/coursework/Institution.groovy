@@ -7,7 +7,7 @@ class Institution {
     String website
 
     static constraints = {
-        name(blank: false)
+        name(blank: false, unique:true)
         address(blank: false)
         website(blank: false)
     }

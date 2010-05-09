@@ -7,7 +7,7 @@ class Programme {
     String link
 
     static constraints = {
-        name(blank: false)
+        name(blank: false, unique:true)
         link(blank: false)
     }
 

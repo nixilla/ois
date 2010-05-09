@@ -6,10 +6,12 @@ class ProgrammeController {
     def scaffold = Programme
 
     def listJSON = {
-        def institution = Institution.findByName(params.institution.toString())
-        render institution.programme.sort{it.name} as JSON
-    }
-    def testParams = {
-        render params.level.class
+        def institution = Institution.findByName(params.institution.toString())        
+        if(institution) render institution.programme.sort{it.name} as JSON
+        else
+        {
+            def tmp = []
+            render tmp as JSON
+        }
     }
 }

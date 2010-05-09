@@ -11,7 +11,9 @@ class ProgrammeTests extends GrailsUnitTestCase {
         super.tearDown()
     }
 
-    void testSomething() {
-
+    void testBlank() {
+        mockForConstraintsTests(Programme)
+        def prog = new Programme()
+        assertFalse prog.validate()
     }
 }

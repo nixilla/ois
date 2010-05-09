@@ -1,6 +1,7 @@
 package coursework
 
 import grails.test.*
+import grails.converters.*;
 
 class ProgrammeControllerTests extends ControllerUnitTestCase {
     protected void setUp() {
@@ -11,7 +12,7 @@ class ProgrammeControllerTests extends ControllerUnitTestCase {
         super.tearDown()
     }
 
-    void testSomething() {
+    void testListJSON() {
 
     }
 }
