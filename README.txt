@@ -1,11 +1,17 @@
+PREREQUISITES:
+
+1. Netbeans with Groovy and Grails installed and activated.
+2. Grails version 1.2.2
+3. Groovy version 1.6.4 or above
+4. MySQL database version 4 or above
+
 INSTALLATION:
 
 1.  Unzip the project file
 2.  Create database on your MySQL DBMS
 3.  Modify file "OIS/grails-app/conf/DataSource.groovy" and change database
     connection setting according to your local environment. More info:
-   
-http://www.grails.org/doc/1.2.x/guide/3.%20Configuration.html#3.2%20Environments
+    http://www.grails.org/doc/1.2.x/guide/3.%20Configuration.html#3.2%20Environments
 4.  Open project with Netbeans
 5.  Click Tools -> Options -> Miscellaneous -> Groovy. Make sure that "Grails
     Home" points to right place. The application uses Grail version 1.2.2
