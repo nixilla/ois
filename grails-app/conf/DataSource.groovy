@@ -29,8 +29,8 @@ environments {
             dbCreate = "update"
             def uri = new URI(System.env.CLEARDB_DATABASE_URL ?: 'mysql://localhost:3306/ois')
             url = "jdbc:mysql://" + uri?.host + uri?.path
-            username = uri?.userInfo?.split(":")[0]
-            password = uri?.userInfo?.split(":")[1]
+            username = uri?.userInfo?.split(":")?.getAt(0)
+            password = uri?.userInfo?.split(":")?.getAt(1)
         }
     }
 }
