@@ -1,9 +1,8 @@
 PREREQUISITES:
 
 1. Netbeans with Groovy and Grails installed and activated.
-2. Grails version 1.2.2
-3. Groovy version 1.6.4 or above
-4. MySQL database version 4 or above
+2. Grails version 1.3.7
+3. MySQL database version 4 or above
 
 INSTALLATION:
 
@@ -103,5 +102,5 @@ OTHER STUFF:
 
 If you can't make this app work, you can see it in action at this URL:
 
-http://janusz.slota.name/ois/
+http://ois.herokuapp.com/
 
