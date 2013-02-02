@@ -31,6 +31,16 @@ environments {
             url = "jdbc:mysql://" + uri?.host + uri?.path + "?autoReconnect=true"
             username = uri?.userInfo?.split(":")?.getAt(0)
             password = uri?.userInfo?.split(":")?.getAt(1)
+            properties {
+                maxActive = 10
+                maxIdle = 5
+                minIdle = 5
+                initialSize = 5
+                minEvictableIdleTimeMillis = 60000
+                timeBetweenEvictionRunsMillis = 60000
+                maxWait = 10000
+                validationQuery = "SELECT NOW()"
+            }
         }
     }
 }
